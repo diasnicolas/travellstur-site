@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelLSTur - O seu destino começa aqui</title>
+    <meta name="description" content="A TravelLSTur é uma agência de viagens especializada em passagens aéreas, reservas de hotéis, pacotes personalizados, seguro viagem e aluguel de carros. Planeje sua próxima aventura conosco!">
+    <meta name="keywords" content="agência de viagens, turismo, passagens aéreas, reserva de hotéis, pacotes de viagem, seguro viagem, aluguel de carros">
+    <link rel="canonical" href="https://www.travellstur.com/">
+	
+	 <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="TravelLSTur - O seu destino começa aqui">
+    <meta property="og:description" content="A TravelLSTur é uma agência de viagens especializada em passagens aéreas, reservas de hotéis, pacotes personalizados, seguro viagem e aluguel de carros. Planeje sua próxima aventura conosco!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.travellstur.com/">
+    <meta property="og:image" content="https://www.travellstur.com/images/redessociais.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3e6b92',
+                        secondary: '#dbe5ee',
+                        accent: '#1d4ed8',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/topo.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(62, 107, 146, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(62, 107, 146, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(62, 107, 146, 0);
+            }
+        }
+        
+        .diferencial-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .diferencial-card:hover {
+            border-left: 4px solid #3e6b92;
+            transform: translateX(5px);
+        }
+        
+        .logo-placeholder {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <header class="bg-primary/90 text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row items-center md:justify-between">
+    <div class="w-full md:w-auto flex justify-center md:justify-start mb-2 md:mb-0">
+        <div class="logo-placeholder">
+            <img src="images/logo.png" alt="TravelLSTur Logotipo" class="logo">
+        </div>
+    </div>
+    <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+            <li><a href="#inicio" class="hover:text-secondary transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-secondary transition-colors">Sobre</a></li>
+            <li><a href="#diferenciais" class="hover:text-secondary transition-colors">Diferenciais</a></li>
+            <li><a href="#servicos" class="hover:text-secondary transition-colors">Serviços</a></li>
+            <li><a href="#contato" class="hover:text-secondary transition-colors">Contato</a></li>
+        </ul>
+    </nav>
+</div>
+    </header>
+
+    <section id="inicio" class="hero-section min-h-[70vh] flex items-center text-white">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">O seu destino começa aqui</h2>
+                <p class="text-lg mb-8">Somos especialistas em transformar sonhos de viagem em experiências inesquecíveis. Conte com nossa expertise para planejar sua próxima aventura com tranquilidade e segurança.</p>
+                <a href="https://app.onertravel.com/travellstur/home" target="_blank" class="inline-block bg-accent hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg">
+                    Encontre a sua viagem
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <section id="sobre" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <!-- SVG ou imagem ilustrativa -->
+        <svg class="w-full max-w-md mx-auto" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="400" fill="#f8fafc" />
+          <circle cx="300" cy="200" r="150" fill="#dbe5ee" />
+          <path d="M300,50 Q450,200 300,350 Q150,200 300,50" fill="#3e6b92" opacity="0.8" />
+          <circle cx="300" cy="200" r="70" fill="#f8fafc" />
+          <path d="M270,170 L330,170 L330,230 L270,230 Z" fill="#3e6b92" />
+          <path d="M250,150 L350,150 L350,250 L250,250 Z" fill="none" stroke="#3e6b92" stroke-width="5" />
+          <path d="M230,130 L370,130 L370,270 L230,270 Z" fill="none" stroke="#3e6b92" stroke-width="2" stroke-dasharray="10,5" />
+        </svg>
+      </div>
+
+      <div class="md:w-1/2 md:pl-10">
+        <h2 class="text-3xl font-bold mb-6 text-primary">Sobre nós</h2>
+
+        <div id="texto-sobre" class="relative max-h-[250px] overflow-hidden transition-all duration-500 ease-in-out">
+          <p class="text-lg mb-4 text-justify">Na TravelLStur, viajar é viver experiências que ficam para sempre. Somos apaixonados por explorar o mundo e ajudar você a descobrir os melhores destinos, com praticidade e zero complicação.</p>
+          <p class="text-lg mb-4 text-justify">Fundada por um profissional graduado em Turismo e Hotelaria, com 18 anos de experiência no setor hoteleiro e especialização em Espanha e Portugal, a TravelLStur oferece um atendimento personalizado para transformar cada viagem em algo único.</p>
+          <p class="text-lg mb-4 text-justify">Sabemos que cada viajante é diferente — por isso criamos roteiros sob medida, de escapadas de fim de semana a grandes aventuras internacionais, sempre respeitando suas preferências e seu orçamento.</p>
+          <p class="text-lg mb-4 text-justify">Com parcerias com as principais empresas do setor, buscamos constantemente as melhores ofertas e soluções inovadoras, garantindo que você viaje com confiança, conforto e estilo.</p>
+          <p class="text-lg mb-4 text-justify">Nosso propósito é simples: tornar sua viagem inesquecível. Seja para relaxar à beira-mar, explorar uma cidade fascinante ou viver momentos de pura adrenalina, estamos ao seu lado em cada passo da jornada.</p>
+          <p class="text-lg font-medium">TravelLStur — O seu destino começa aqui. Vamos juntos?</p>
+        </div>
+
+        <div class="mt-4">
+          <button id="toggle-sobre" class="text-primary font-semibold hover:underline">
+            Ler mais
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Nova seção de Diferenciais -->
+    <section id="diferenciais" class="py-16 bg-gradient-to-b from-primary/10 to-secondary/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 text-center text-primary">Nossos Diferenciais</h2>
+            <p class="text-lg text-center mb-12 max-w-3xl mx-auto">O que nos torna a escolha ideal para planejar sua próxima viagem? Conheça os diferenciais que fazem da TravelLSTur uma agência única.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="diferencial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-primary/20 p-3 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-primary">Atendimento Personalizado</h3>
+                            <p class="text-gray-600">Entendemos que cada viajante é único. Por isso, oferecemos atendimento personalizado, criando experiências sob medida para suas necessidades e desejos específicos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diferencial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-primary/20 p-3 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-primary">Excelência em Serviço</h3>
+                            <p class="text-gray-600">Nossa equipe é formada por profissionais experientes e apaixonados por viagens, comprometidos em oferecer o mais alto padrão de qualidade em todos os serviços.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diferencial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-primary/20 p-3 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-primary">Destinos Exclusivos</h3>
+                            <p class="text-gray-600">Oferecemos acesso a destinos exclusivos e experiências únicas que não estão disponíveis em pacotes convencionais, proporcionando momentos verdadeiramente inesquecíveis.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diferencial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-primary/20 p-3 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd" d="M5 11a5 5 0 1110 0 1 1 0 11-2 0 3 3 0 10-6 0c0 1.677-.345 3.276-.968 4.729a1 1 0 11-1.838-.789A9.964 9.964 0 005 11zm8.921 2.012a1 1 0 01.831 1.145 19.86 19.86 0 01-.545 2.436 1 1 0 11-1.92-.558c.207-.713.371-1.445.49-2.192a1 1 0 011.144-.83z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-primary">Suporte</h3>
+                            <p class="text-gray-600">Oferecemos assistência completa durante toda a sua viagem, para que você possa viajar com total tranquilidade e segurança.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diferencial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-primary/20 p-3 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-primary">Melhor Custo-Benefício</h3>
+                            <p class="text-gray-600">Negociamos diretamente com fornecedores para garantir as melhores tarifas e condições, oferecendo o melhor custo-benefício sem comprometer a qualidade.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diferencial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-primary/20 p-3 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-primary">Segurança e Confiabilidade</h3>
+                            <p class="text-gray-600">Trabalhamos apenas com parceiros confiáveis e oferecemos seguros de viagem completos, garantindo tranquilidade durante toda a sua experiência.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="whatsapp.html?tipo=especialista" class="inline-block bg-primary hover:bg-primary/80 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg">
+                    Fale com um especialista
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-16 bg-secondary bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-primary">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-3 bg-primary"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Passagens Aéreas</h3>
+                        <p class="text-gray-600">Oferecemos as melhores opções de passagens aéreas nacionais e internacionais, com preços competitivos e condições especiais de pagamento.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-3 bg-primary"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Reserva de Hotéis</h3>
+                        <p class="text-gray-600">Parceria com os melhores hotéis e resorts ao redor do mundo, garantindo conforto e qualidade para sua hospedagem.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-3 bg-primary"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Pacotes</h3>
+                        <p class="text-gray-600">Pacotes completos para os destinos mais procurados, incluindo passagens, hospedagem, traslados e passeios, com ótimo custo-benefício.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-3 bg-primary"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Pacotes Personalizados</h3>
+                        <p class="text-gray-600">Criamos roteiros exclusivos de acordo com seus interesses, preferências e orçamento, para uma experiência única e sob medida.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-3 bg-primary"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Seguro Viagem</h3>
+                        <p class="text-gray-600">Proteção completa para você viajar com tranquilidade, cobrindo despesas médicas, extravio de bagagem, cancelamento e muito mais.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-3 bg-primary"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+                                <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Aluguel de Carros</h3>
+                        <p class="text-gray-600">Facilitamos a locação de veículos no Brasil e no exterior, com as melhores locadoras e condições especiais para nossos clientes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://app.onertravel.com/travellstur/home" target="_blank" class="inline-block bg-accent hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg">
+                    Encontre a sua viagem
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-primary">Entre em Contato</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-secondary bg-opacity-30 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Informações de Contato</h3>
+                        
+                        <div class="mb-4 flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>
+                                <p class="font-medium">Endereço:</p>
+                                <p class="text-gray-600">R. Três de Outubro, 404 - 702 - Languiru, Teutônia - RS, 95890-000</p>
+                            </div>
+                        </div>
+						
+						<div class="mb-4 flex items-start">
+							<svg class="w-5 h-5 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/>
+							</svg>
+							<div>
+								<p class="font-medium">WhatsApp:</p>
+								<p>
+									<a href="whatsapp.html?tipo=contato" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition-colors">
+										(51) 98167-0944
+									</a>
+								</p>
+							</div>
+						</div>
+                        
+                        <div class="mb-4 flex items-start">
+							<svg class="w-5 h-5 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+							</svg>
+							<div>
+								<p class="font-medium">Telefone:</p>
+								<p>
+									<a href="tel:+5551981670944" class="text-gray-600 hover:text-primary transition-colors">
+										(51) 98167-0944
+									</a>
+								</p>
+							</div>
+						</div>
+                        
+                        <div class="mb-4 flex items-start">
+							<svg class="w-5 h-5 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+							</svg>
+							<div>
+								<p class="font-medium">Email:</p>
+								<p>
+									<a href="mailto:leandro.agencia@travellstur.com" class="text-gray-600 hover:text-primary transition-colors">
+										leandro.agencia@travellstur.com
+									</a>
+								</p>
+							</div>
+						</div>
+                        
+                        <div class="mb-4 flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 01-1.5.87l-4.5-2.25L6.5 16.87A1 1 0 015 16V4zm2 0v10.5l3.5-1.75L13 14.5V4H6z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>
+                                <p class="font-medium">CNPJ:</p>
+                                <p class="text-gray-600">60.459.670/0001-00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-medium mb-2">Siga-nos nas redes sociais:</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.instagram.com/travellstur" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/travellstur" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.threads.com/@travellstur" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" aria-label="Threads" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="x19hqcy" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-full">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.558537093108!2d-51.81098762372328!3d-29.470898804918924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c6e4ae151e2d3%3A0x375c2d230f9c39da!2sR.%20Tr%C3%AAs%20de%20Outubro%2C%20404%20-%20702%20-%20Languiru%2C%20Teut%C3%B4nia%20-%20RS%2C%2095890-000!5e0!3m2!1spt-BR!2sbr!4v1753492394255!5m2!1spt-BR!2sbr" width="720" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <!-- Footer logo placeholder - replace with your actual logo -->
+                       <div class="logo-placeholder">
+							<img src="images/logo.png" alt="TravelLSTur Logotipo" class="logo">
+						</div>
+                    </div>
+                    <p class="mt-2 text-sm">CNPJ: 60.459.670/0001-00</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end space-x-4 mb-4">
+                        <a href="https://www.instagram.com/travellstur" target="_blank" rel="noopener noreferrer" class="text-white hover:text-secondary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/travellstur" target="_blank" rel="noopener noreferrer" class="text-white hover:text-secondary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.threads.com/@travellstur" target="_blank" rel="noopener noreferrer" class="text-white hover:text-secondary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" aria-label="Threads" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+                                <path class="x19hqcy" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-sm">TravelLSTur - Todos os direitos reservados © <script>document.write(new Date().getFullYear());</script></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="whatsapp.html" target="_blank" rel="noopener noreferrer" class="floating-whatsapp bg-green-500 text-white p-3 rounded-full shadow-lg flex items-center justify-center">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964fe9338069a67d',t:'MTc1MzQ5MTExMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>
+  const toggleBtn = document.getElementById('toggle-sobre');
+  const textoSobre = document.getElementById('texto-sobre');
+
+  toggleBtn.addEventListener('click', () => {
+    const expanded = textoSobre.classList.contains('max-h-[250px]');
+    if (expanded) {
+      textoSobre.classList.remove('max-h-[250px]');
+      textoSobre.classList.add('max-h-[2000px]');
+      toggleBtn.textContent = 'Ler menos';
+    } else {
+      textoSobre.classList.add('max-h-[250px]');
+      textoSobre.classList.remove('max-h-[2000px]');
+      toggleBtn.textContent = 'Ler mais';
+    }
+  });
+</script>
+</body>
+</html>
