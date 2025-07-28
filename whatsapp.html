@@ -108,7 +108,7 @@
     
     // Função para redirecionar para o WhatsApp com a mensagem correta
     function redirectToWhatsApp() {
-      const phone = "5551981670944"; // Substitua pelo número correto
+      const phone =  getUrlParameter('telefone') || '5551981670944'; // Substitua pelo número correto
       const messageType = getUrlParameter('tipo') || 'padrao';
       let message = '';
       
